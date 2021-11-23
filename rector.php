@@ -3,9 +3,8 @@
 declare(strict_types=1);
 
 use Rector\Core\Configuration\Option;
-use Rector\Php74\Rector\Property\TypedPropertyRector;
-use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Symfony\Set\SymfonySetList;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     // get parameters
@@ -14,9 +13,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         __DIR__ . '/src'
     ]);
 
-    // first
-    $containerConfigurator->import(\Rector\Symfony\Set\SymfonySetList::SYMFONY_52);
+    // A) attributes PHP 8.0
+    $containerConfigurator->import(SymfonySetList::SYMFONY_52);
 
-    // then nested
-    // $containerConfigurator->import(\Rector\Symfony\Set\SymfonySetList::SYMFONY_54);
+    // B) nested with PHP 8.1 - https://symfony.com/blog/new-in-symfony-5-4-nested-validation-attributes
+    $containerConfigurator->import(SymfonySetList::SYMFONY_54);
 };
