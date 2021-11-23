@@ -1,5 +1,14 @@
 {
     "require": {
+        "php": "^8.0",
         "symfony/validator": "^5.3"
+    },
+    "require-dev": {
+        "rector/rector": "^0.12.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
     }
 }
