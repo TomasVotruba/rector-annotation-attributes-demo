@@ -14,6 +14,12 @@ final class Talk
     public $title;
 
     /**
+     * @Assert\NotNull
+     * @Assert\Count(min=1),
+     */
+    public $userCount;
+
+    /**
      * @Assert\All({
      *   @Assert\NotNull(),
      *   @Assert\Count(min=2, max=4),
