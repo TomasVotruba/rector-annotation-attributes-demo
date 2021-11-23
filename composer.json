@@ -4,7 +4,7 @@
         "symfony/validator": "^5.3"
     },
     "require-dev": {
-        "rector/rector": "dev-main"
+        "rector/rector": "^0.12.5"
     },
     "autoload": {
         "psr-4": {
