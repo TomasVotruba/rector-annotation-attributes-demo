@@ -19,7 +19,7 @@ final class Talk
     /**
      * @ORM\Column(type="int")
      * @Assert\NotNull
-     * @Assert\Count(min=1),
+     * @Assert\Count(min=1)
      */
     public $userCount;
 

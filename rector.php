@@ -18,7 +18,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(SymfonySetList::SYMFONY_52);
 
     // B) doctrine attributes?
-    $containerConfigurator->import(DoctrineSetList::DOCTRINE_ORM_29);
+    // $containerConfigurator->import(DoctrineSetList::DOCTRINE_ORM_29);
 
     // C) nested with PHP 8.1 - https://symfony.com/blog/new-in-symfony-5-4-nested-validation-attributes
     // $containerConfigurator->import(SymfonySetList::SYMFONY_54);
