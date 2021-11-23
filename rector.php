@@ -17,5 +17,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(SymfonySetList::SYMFONY_52);
 
     // B) nested with PHP 8.1 - https://symfony.com/blog/new-in-symfony-5-4-nested-validation-attributes
-    $containerConfigurator->import(SymfonySetList::SYMFONY_54);
+    // $containerConfigurator->import(SymfonySetList::SYMFONY_54);
+
+    // $parameters->set(Option::PHP_VERSION_FEATURES, \Rector\Core\ValueObject\PhpVersionFeature::NEW_INITIALIZERS);
 };
