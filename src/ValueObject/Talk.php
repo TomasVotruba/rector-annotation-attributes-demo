@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\ValueObject;
 
-
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -28,7 +27,6 @@ final class Talk
      *   @Assert\NotNull(),
      *   @Assert\Count(min=2, max=4),
      * })
-     * @see https://symfony.com/blog/new-in-symfony-5-2-php-8-attributes
      */
     public $parts;
 }
