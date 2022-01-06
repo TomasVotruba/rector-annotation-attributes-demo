@@ -42,26 +42,25 @@ jobs:
             -   run: composer install --no-progress --ansi
 
             # A. report only
-            -   run: vendor/bin/rector process src --ansi --no-progress-bar --dry-run
+#            -   run: vendor/bin/rector process src --ansi --no-progress-bar --dry-run
 
             # B. work for you B-)
 
             # todo remove to apply
-#            -   run: vendor/bin/rector process src --ansi --no-progress-bar
-#
-#            -   run: vendor/bin/ecs check --fix --ansi
-#
-#            # see https://github.com/EndBug/add-and-commit
-#            -
-#                # commit only to core contributors who have repository access
-#                if: github.event.pull_request.head.repo.full_name == github.repository
-#                uses: EndBug/add-and-commit@v7.5.0
-#                with:
-#                    # The arguments for the `git add` command (see the paragraph below for more info)
-#                    add: .
-#                    message: "[ci-review] Rector Rectify"
-#                    author_name: "GitHub Action"
-#                    author_email: "action@github.com"
-#                env:
-#                    # to get push access
-#                    GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+            -   run: vendor/bin/rector process src --ansi --no-progress-bar
+
+            -   run: vendor/bin/ecs check --fix --ansi
+
+            # see https://github.com/EndBug/add-and-commit
+            -
+                # commit only to core contributors who have repository access
+                uses: EndBug/add-and-commit@v7.5.0
+                with:
+                    # The arguments for the `git add` command (see the paragraph below for more info)
+                    add: .
+                    message: "[ci-review] Rector Rectify"
+                    author_name: "GitHub Action"
+                    author_email: "action@github.com"
+                env:
+                    # to get push access
+                    GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
