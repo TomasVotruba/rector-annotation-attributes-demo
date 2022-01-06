@@ -20,4 +20,23 @@ final class Talk
 
     #[Assert\All(constraints: [new Assert\NotNull(), new Assert\Count(min: 2, max: 4)])]
     public $parts;
+
+    // ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * @ORM\Column(type: "string")
+     */
+    public $meetupGroupName;
 }
